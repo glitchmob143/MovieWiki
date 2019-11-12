@@ -1,0 +1,41 @@
+<%- include('header') -%>
+
+  <div class="centered">
+      <div class="cards">
+  <% movies.forEach(function(movie,i,arr){ %>
+  <% if(i<6 ){ %>
+    <form class="" action="/movie" method="post">
+    <div class="card">
+      <h5><%= movie.Title %></h5>
+      <img  src="<%= movie.Poster %>" alt="N/A">
+      <br>
+      <button class="det-button" type="submit" name="detSubmit" value="<%= movie.imdbID %>">+</button>
+    </div>
+</form>
+  <%} else { %>
+    <form class="play hide" action="/movie" method="post">
+    <div class="card">
+      <h5><%= movie.Title %></h5>
+      <img  src="<%= movie.Poster %>" alt="N/A">
+      <br>
+      <button class="det-button" type="submit" name="detSubmit" value="<%= movie.imdbID %>">+</button>
+    </div>
+</form>
+  <% }});%>
+</div>
+  </div>
+
+  <div class="centered">
+      <button onclick="showHide()">...</button>
+  </div>
+
+<script type="text/javascript">
+    function showHide(){
+      var x=document.querySelectorAll(".play");
+      x.forEach(function(ele){
+        ele.classList.toggle("hide");
+      });
+    }
+</script>
+
+<%- include('footer') -%>

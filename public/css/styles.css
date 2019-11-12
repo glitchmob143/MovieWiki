@@ -1,0 +1,127 @@
+body {
+
+  background-image: -webkit-linear-gradient( #000000 100%, #af0404 80%);
+  min-height: 1000px;
+  font-family: 'Rubik', sans-serif;
+  position: relative;
+}
+
+h1{
+  font-family: 'Fjalla One', sans-serif;
+  color: #000000;
+}
+
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+  outline: none;
+  opacity: 100;
+  background: transparent;
+  box-shadow: inset 0 -3px 0 0 #000000;
+  margin-bottom: 30px;
+}
+
+button, a {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  border-color: transparent;
+  background-color: #af0404;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+.desc {
+  text-align: left;
+  padding-left: 50px;
+}
+
+
+.search-movie{
+  background-color: #af0404;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-right: 10%;
+  margin-left: 10%;
+
+  border-radius: 20px;
+
+}
+
+.centered{
+  margin-left: 10%;
+  text-align: center;
+  margin-right: 10%;
+  padding-bottom:10%;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+
+ }
+
+.card {
+    flex: 1 0 500px;
+    box-sizing: border-box;
+    margin: 1rem .25em;
+    background-color: #af0404;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+@media screen and (min-width: 40em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+
+
+.footer{
+  position: absolute;
+  display:block;
+  color: #E4E9FD;
+
+  top: 99%;
+}
+
+footer p {
+  margin-left: 45%;
+  margin-right: 42%;
+  padding-top: 30px;
+
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,30 @@
+<%- include('header') -%>
+
+<div class="centered">
+  <div class="card">
+
+  <h1 class="desc"><%= movieDesc.Title %></h1>
+  <p class= "desc"><img src="<%= movieDesc.Poster %>" alt="N/A"></p>
+  <p class= "desc">Year: <%= movieDesc.Year %></p>
+  <p class= "desc">Rated: <%= movieDesc.Rated %></p>
+  <p class= "desc">Released: <%= movieDesc.Released %></p>
+  <p class= "desc">Runtime: <%= movieDesc.Runtime %></p>
+  <p class= "desc">Genre: <%= movieDesc.Genre %></p>
+  <p class= "desc">Director: <%= movieDesc.Director %></p>
+  <p class= "desc">Writer: <%= movieDesc.Writer %></p>
+  <p class= "desc">Actors: <%= movieDesc.Actors %></p>
+  <p class= "desc">Plot: <%= movieDesc.Plot %></p>
+  <p class= "desc">Language: <%= movieDesc.Language %></p>
+  <p class= "desc">Country: <%= movieDesc.Country %></p>
+  <p class= "desc">Awards: <%= movieDesc.Awards %></p>
+  <% movieDesc.Ratings.forEach(function(rate){ %>
+    <p class= "desc"><%= rate.Source %> : <%= rate.Value %></p>
+  <% }); %>
+
+  <a href="/movies">x</a>
+
+  </div>
+</div>
+
+
+<%- include('footer') -%>
