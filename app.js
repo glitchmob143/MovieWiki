@@ -21,7 +21,7 @@ app.get("/movies",function(req,res){        //movie list request
 });
 
 
-app.post("/", function(req,res){            //movie search request 
+app.post("/", function(req,res){            //movie search request
   let searchQuery = req.body.query;
   fetch("http://www.omdbapi.com/?apikey=6c6934&s="+searchQuery)
   .then(resp => resp.json())
@@ -45,7 +45,7 @@ app.post("/movie",function(req,res){        //description request
   .then((body) => {
     let movieDesc = body;
     if(movieDesc)
-    res.render("movie", {movieDesc: movieDesc, element: element});
+    res.render("movie", {movieDesc: movieDesc, id:id});
 });
 });
 

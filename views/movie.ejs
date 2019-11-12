@@ -20,7 +20,7 @@
   <% movieDesc.Ratings.forEach(function(rate){ %>
     <p class= "desc"><%= rate.Source %> : <%= rate.Value %></p>
   <% }); %>
-
+  <a  target = "_blank" href="https://www.imdb.com/title/<%= id %>">IMDB</a> <br> <br> <hr>
   <a href="/movies">x</a>
 
   </div>
